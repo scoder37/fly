@@ -1,12 +1,3 @@
-/*
-|=======================================|
-| NAME: NYOH API                        |
-| VERSION: 0.0.1                        |
-| CREATOR: AMIRUL DEV                   |
-| WEB: WWW.AMIRULDEV.NET                |
-| TEMPLATE BY: MBAH AGUS                |
-|=======================================|
-*/
 var express = require('express'),
 cors = require('cors'),
 secure = require('ssl-express-www');
@@ -19,7 +10,7 @@ app.enable('trust proxy');
 app.set("json spaces",2)
 app.use(cors())
 app.use(secure)
-app.use(express.static("./renz/views")) // temp
+app.use(express.static("./renz")) // temp
 
 app.use('/', mainrouter) // home
 
