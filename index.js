@@ -11,7 +11,7 @@ var express = require('express'),
 cors = require('cors'),
 secure = require('ssl-express-www');
 const PORT = process.env.PORT || 8080 || 5000 || 3000
-var { color } = require('./renz/lib/color.js')
+
 var mainrouter = require('./router/main'),
 
 var app = express()
@@ -24,7 +24,7 @@ app.use(express.static("./renz/views")) // temp
 app.use('/', mainrouter) // home
 
 app.listen(PORT, () => {
-console.log(color("Server running on port " + PORT,'green'))
+console.log("Server running on port " + PORT)
 })
 
 module.exports = app
